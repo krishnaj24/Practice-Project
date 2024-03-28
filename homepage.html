@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Radiant Beauty</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="homepage.css"> 
+  <link rel="stylesheet" href="facewash.css"> 
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" >
+  <script src="homepage.js" ></script>
+ <div class= "container fixed-top" id="bye" ></div>
+<nav class="navbar navbar-default navbar-fixed-top sticky-top" style="margin-bottom: 70px;" >
+  <div class="promo-container sticky-top" style="background-color: rgb(209, 230, 237); padding: 8px;text-align: center;width:100%;color:black; font-family: Montserrat, sans-serif;">
+    <p><b>Avail 30% off on our skincare essentials</b></p>
+</div>
+  <div class="container">
+    <div class="navbar-header">
+      <img src="logo-removebg-preview2.png" style="width: 200px; height: 84; margin: 10px;">
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="homepage.html">HOME</a></li>
+         <li><a href="facewash.html">PRODUCTS</a></li>
+        <li><a href="offer.html">OFFER</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+       
+        <li><a href="#"><span class="glyphicon glyphicon-search" style="color: black;height:10px;width:10px; margin-left: 210px;" id="sicon"onclick="showSearchPopup()"></span></a></li>
+          <!-- Search Popup container -->
+          <div id="overlay"></div>
+          <div id="popup">
+            <div id="closeIcon" onclick="hideSearchPopup()"><span class="glyphicon glyphicon-remove"></span></div>
+            <hr>
+              <label for="searchInput" style="font-family: 'Times New Roman', Times, serif;font-size: larger;">Search:</label>
+              <input type="text" id="searchInput" placeholder="search" style="width:300px;border:none;border-radius:0%;height:25px;">
+              <button onclick="search()" style="background-color: rgb(234, 238, 241);border: none;width: 60px;border-radius: 20px;">Search</button>
+          </div>
+          <script src="search.js"></script>
+       
+        <li><a href="form.php"><span class="glyphicon glyphicon-user" style="color: black;height:20px;width:20px;" ></span></a></li>
+        <header>
+          <div class="icon-cart">
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"/>
+              </svg>
+              <span>0</span>
+          </div>
+        </header>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="containerr">
+        
+  <div class="listProduct">
+
+  </div>
+</div>
+<div class="cartTab">
+  <h1>Shopping Cart</h1>
+  <div class="listCart">
+      
+  </div>
+  <div class="btnn">
+      <button class="Close">Close</button>
+      <button class="Check Out"><a href="
+        https://rzp.io/l/vIZSmRg
+        ">Check Out</a></button>
+  </div>
+</div>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- CART -->
+<script>
+  let listProductHTML = document.querySelector('.listProduct');
+  let listCartHTML = document.querySelector('.listCart');
+  let iconCart = document.querySelector('.icon-cart');
+  let iconCartSpan = document.querySelector('.icon-cart span');
+  let body = document.querySelector('body');
+  let closeCart = document.querySelector('.Close');
+  let products = [];
+  let cart = [];
+  
+  
+  iconCart.addEventListener('click', () => {
+      body.classList.toggle('showCart');
+  })
+  closeCart.addEventListener('click', () => {
+      body.classList.toggle('showCart');
+  })
+  
+      const addDataToHTML = () => {
+      
+      }
+      listProductHTML.addEventListener('click', (event) => {
+          let positionClick = event.target;
+          if(positionClick.classList.contains('addCart')){
+              let id_product = positionClick.parentElement.dataset.id;
+              addToCart(id_product);
+          }
+      })
+  const addToCart = (product_id) => {
+      let positionThisProductInCart = cart.findIndex((value) => value.product_id == product_id);
+      if(cart.length <= 0){
+          cart = [{
+              product_id: product_id,
+              quantity: 1
+          }];
+      }else if(positionThisProductInCart < 0){
+          cart.push({
+              product_id: product_id,
+              quantity: 1
+          });
+      }else{
+          cart[positionThisProductInCart].quantity = cart[positionThisProductInCart].quantity + 1;
+      }
+      addCartToHTML();
+      addCartToMemory();
+  }
+  const addCartToMemory = () => {
+      localStorage.setItem('cart', JSON.stringify(cart));
+  }
+  const addCartToHTML = () => {
+      listCartHTML.innerHTML = '';
+      let totalQuantity = 0;
+      if(cart.length > 0){
+          cart.forEach(item => {
+              totalQuantity = totalQuantity +  item.quantity;
+              let newItem = document.createElement('div');
+              newItem.classList.add('item');
+              newItem.dataset.id = item.product_id;
+  
+              let positionProduct = products.findIndex((value) => value.id == item.product_id);
+              let info = products[positionProduct];
+              listCartHTML.appendChild(newItem);
+              newItem.innerHTML = `
+              <div class="image">
+                      <img src="${info.image}">
+                  </div>
+                  <div class="name">
+                  ${info.name}
+                  </div>
+                  <div class="totalPrice">&#8377; ${info.price * item.quantity}</div>
+                  <div class="quantity">
+                      <span class="minus"><</span>
+                      <span>${item.quantity}</span>
+                      <span class="plus">></span>
+                  </div>
+              `;
+          })
+      }
+      iconCartSpan.innerText = totalQuantity;
+  }
+  
+  listCartHTML.addEventListener('click', (event) => {
+      let positionClick = event.target;
+      if(positionClick.classList.contains('minus') || positionClick.classList.contains('plus')){
+          let product_id = positionClick.parentElement.parentElement.dataset.id;
+          let type = 'minus';
+          if(positionClick.classList.contains('plus')){
+              type = 'plus';
+          }
+          changeQuantityCart(product_id, type);
+      }
+  })
+  const changeQuantityCart = (product_id, type) => {
+      let positionItemInCart = cart.findIndex((value) => value.product_id == product_id);
+      if(positionItemInCart >= 0){
+          let info = cart[positionItemInCart];
+          switch (type) {
+              case 'plus':
+                  cart[positionItemInCart].quantity = cart[positionItemInCart].quantity + 1;
+                  break;
+          
+              default:
+                  let changeQuantity = cart[positionItemInCart].quantity - 1;
+                  if (changeQuantity > 0) {
+                      cart[positionItemInCart].quantity = changeQuantity;
+                  }else{
+                      cart.splice(positionItemInCart, 1);
+                  }
+                  break;
+          }
+      }
+      addCartToHTML();
+      addCartToMemory();
+  }
+  
+  const initApp = () => {
+      // get data product
+      fetch('facewash.json')
+      .then(response => response.json())
+      .then(data => {
+          products = data;
+          addDataToHTML();
+  
+          // get data cart from memory
+          if(localStorage.getItem('cart')){
+              cart = JSON.parse(localStorage.getItem('cart'));
+              addCartToHTML();
+          }
+      })
+  }
+  initApp();
+  </script>
+  
+  <div  id="myCarousel" class="carousel slide text-center" data-ride="carousel" data interval="5000" >
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox" style="margin-top: -160px;">
+      <div class="item active">
+        <img src="homepage_banner.png" style="display: block;  margin-left: auto;  margin-right: auto;height:600px;  width: 100%;" class="center">
+      </div>
+      <div class="item">
+        <img src="Skin Care Ad.png" style="display: block;  margin-left: auto;  margin-right: auto;height:600px;  width: 100%;" class="center">
+      </div>
+      <div class="item">
+        <img src="moisturizer.png" style="display: block;  margin-left: auto;  margin-right: auto;height:600px;  width: 100%;" class="center">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  <script>
+    // Set the top margin dynamically based on the height of the sticky navbar
+    var navbarHeight = $('.navbar').outerHeight();
+    $('#myCarousel').css('margin-top', navbarHeight);
+</script>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid" style="padding: 40px; margin-top: -50px;">
+  <br><br>
+  <div class="row">
+    <div class="col-sm-8">
+      <br><br><br>
+      <h2>About Us</h2><br>
+      <p>Welcome to Radiant Beauty, where we invite you to elevate your skincare experience to new heights. Our brand is built on a foundation of unwavering commitment to quality and innovation, seamlessly blending science and beauty to create meticulously formulated skincare solutions.
+        <br><br>At Radiant Beauty, we understand that achieving healthy, glowing skin is a journey, and we are dedicated to being a vital part of that transformative process. Our passion for continuous improvement is reflected in every product we offer. Each item is the result of extensive research, utilizing premium ingredients that work in harmony to deliver visible and lasting results.
+        <br><br>As you explore the Radiant Beauty collection, we believe in the importance of radiating beauty from within, and we invite you to join us on this journey.</p>
+      <br><button style="background-color:#93c1f7;border-radius:5px;color:black; padding: 10px;"><a href="facewash.html" style="color: black;">BUY NOW</a></button>
+    </div>
+    <div class="col-sm-4">
+      <br><br>
+      <img src="blueproducts.jpg" class="img-circle" alt="Product" height="500px">
+    </div>
+  </div>
+</div>
+<script src="facewash.json"></script>
+<!-- Container (Contact Section) -->
+<div class="footer" id="contact">
+  <h2 class="text-center">CONTACT</h2>
+  <p style="color:black;font-size: large;text-align: center;">Contact us and we'll get back to you within 24 hours.</p>
+  <p style="color:black;font-size:large;text-align: center;"><span class="glyphicon glyphicon-envelope" style="color:black;font-weight: 200;"></span> myemail@something.com</p>
+  <br>
+  <div class="container row">
+    <div class="footer-col">
+      <h4>Need Help?</h4>
+      <ul>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Shipping</a></li>
+        <li><a href="#">Returns</a></li>
+        <li><a href="#">Order status</a></li>
+        <li><a href="#">Payment options</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+        <ul>
+          <li><a href="review.html">Reviews</a></li>
+          <li><a href="terms.html">Terms & Conditions</a></li>
+          <li><a href="#">Visit Website</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Our Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Office Location</h4>
+        <ul>
+          <li><a href="#">Office 321, Glass Tower, Churchgate, Mumbai</a></li> 
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>follow us</h4>
+        <div class="social-links">
+          <a href="#"><i class="fa-brands fa-facebook"><img src="fb-removebg-preview.png" style="height: 25px;"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"><img src="in-removebg-preview.png" style="height: 25px;"></i></a>
+        </div>
+      </div>
+    </div>
+    <div id="horizontal-line"></div>
+    <div id="copyright">
+      
+        &copy; All Rights Reserved 2023-2024
+    <br><br>
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+    </div>
+  </div>
+
+
+
+</body>
+</html>

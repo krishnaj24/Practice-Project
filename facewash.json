@@ -1,0 +1,372 @@
+[
+    {
+        "id": 1,
+        "name":"Aloevera Facewash",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 200,
+        "rating": "★★★★★",
+        "image": "photos/facewash/facewash-aloevera.jpg"
+    },
+    {
+        "id": 22,
+        "name":"Cocoa Moisturizer",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 520,
+        "rating": "★★★★★",
+        "image": "photos/moisturizer/moisturizer-cocoa.jpg"
+    },
+    {
+        "id": 39,
+        "name":"Aloevera And Turmeric Kit",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 990,
+        "rating": "★★★★☆",
+        "image": "photos/kit/kit-aloevera&turmeric.jpg"
+    },{
+        "id": 40,
+        "name":"Gold Kit",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 999,
+        "rating": "★★★★☆",
+        "image": "photos/kit/kit-gold.jpg"
+    },
+    
+    {
+        "id": 4,
+        "name":"Lemon Facewash",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 200,
+        "rating": "★★★☆☆",
+        "image": "photos/facewash/facewash-lemon.jpg"
+    },
+    {
+        "id": 5,
+        "name":"Lime Facewash",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 300,
+        "rating": "★★★★★",
+        "image": "photos/facewash/facewash-lime.jpg"
+    },
+    {
+        "id": 6,
+        "name":"Mango Facewash",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 200,
+        "rating": "★★★☆☆",
+        "image": "photos/facewash/facewash-mango.jpg"
+    },
+    {
+        "id": 7,
+        "name":"Neem Facewash",
+        "description":"Refreshing facewash with natural aloevera extracts.",
+        "price": 200,
+        "rating":"★★★★☆",
+        "image": "photos/facewash/facewash-neem.jpg"
+    },
+    {
+        "id": 8,
+        "name":"Orange Facewash",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 200,
+        "rating": "★★★★☆",
+        "image": "photos/facewash/facewash-orange.jpg"
+    },
+    {
+        "id": 8,
+        "name":"Rose Facewash",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 200,
+        "rating": "★★★★★",
+        "image": "photos/facewash/facewash-rose.jpg"
+    },
+    {
+        "id": 8,
+        "name":"Strawberry Facewash",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 200,
+        "rating": "★★★★★",
+        "image": "photos/facewash/facewash-strawberry.jpg"
+    },
+    {
+        "id": 9,
+        "name":"Aqua Serum",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 500,
+        "rating": "★★★★★",
+        "image": "photos/serum/serum-aqua.jpg"
+    },
+    {
+        "id": 10,
+        "name":"Gold Serum",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 500,
+        "rating": "★★★★☆",
+        "image": "photos/serum/serum-gold.jpg"
+    },
+    {
+        "id": 10,
+        "name":"Orange Serum",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 450,
+        "rating": "★★★☆☆",
+        "image": "photos/serum/serum-orange.jpg"
+    },
+    {
+        "id": 11,
+        "name":"Peach Serum",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 500,
+        "rating": "★★★☆☆",
+        "image": "photos/serum/serum-peach.jpg"
+    },
+    {
+        "id": 12,
+        "name":"Rose Serum",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 500,
+        "rating": "★★★★☆",
+        "image": "photos/serum/serum-rose.jpg"
+    },
+    {
+        "id": 13,
+        "name":"Aloevera Scrub",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 550,
+        "rating": "★★☆☆☆",
+        "image": "photos/scrub/aloevera scrub.jpg"
+    },
+    {
+        "id": 14,
+        "name":"Coco Scrub",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 500,
+        "rating": "★★★★★",
+        "image": "photos/scrub/coco scrub.jpg"
+    },
+    {
+        "id": 15,
+        "name":"Orange Scrub",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 500,
+        "rating": "★★★★☆",
+        "image": "photos/scrub/orange scrub.jpg"
+    },
+    
+    {
+        "id": 17,
+        "name":"Apricot Scrub",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 540,
+        "rating": "★★☆☆☆",
+        "image": "photos/scrub/scrub-apricot.jpg"
+    },
+    {
+        "id": 18,
+        "name":"Vanilla Scrub",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 540,
+        "rating": "★★★★☆",
+        "image": "photos/scrub/scrub-vanilla.jpg"
+    },
+    {
+        "id": 19,
+        "name":"Turmeric Scrub",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 540,
+        "rating": "★★★★★",
+        "image": "photos/scrub/turmeric scrub.jpg"
+    },
+    {
+        "id": 20,
+        "name":"Argon Oil Moisturizer",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 500,
+        "rating": "★★★☆☆",
+        "image": "photos/moisturizer/argon oil moisturizer.jpg"
+    },
+    {
+        "id": 21,
+        "name":"Coffee Moisturizer",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 550,
+        "rating": "★★★★☆",
+        "image": "photos/moisturizer/coffee moisturizer.jpg"
+    },
+  
+    {
+        "id": 23,
+        "name":"Coconut Moisturizer",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 580,
+        "rating": "★★★★★",
+        "image": "photos/moisturizer/moisturizer-coconut.jpg"
+    },
+    {
+        "id": 2,
+        "name":"Berries Facewash",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 250,
+        "rating": "★★☆☆☆",
+        "image": "photos/facewash/facewash-berries.jpg"
+    },
+    {
+        "id": 3,
+        "name":"24K Gold Facewash",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 290,
+        "rating": "★★★★☆",
+        "image": "photos/facewash/facewash-gold.jpg"
+    },
+    {
+        "id": 24,
+        "name":"Shea Butter Moisturizer",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 500,
+        "rating": "★★★★★",
+        "image": "photos/moisturizer/moisturizer-shea.jpg"
+    },
+    {
+        "id": 25,
+        "name":"Jasmine Moisturizer",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 490,
+        "rating": "★★☆☆☆",
+        "image": "photos/moisturizer/jasmine moisturizer.jpg"
+    },
+    {
+        "id": 26,
+        "name":"Mineral Sunscreen",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 490,
+        "rating": "★★★★☆",
+        "image": "photos/sunscreen/sunscreen-mineral.jpg"
+    },
+    {
+        "id": 27,
+        "name":"Orange Sunscreen",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 490,
+        "rating": "★★★☆☆",
+        "image": "photos/sunscreen/sunscreen-orange.jpg"
+    },
+    {
+        "id": 28,
+        "name":"Organic Sunscreen",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 490,
+        "rating": "★★☆☆☆",
+        "image": "photos/sunscreen/sunscreen-organic.jpg"
+    },
+    {
+        "id": 29,
+        "name":"Water Resistant Sunscreen",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 490,
+        "rating": "★★☆☆☆",
+        "image": "photos/sunscreen/sunscreen-waterresistant.jpg"
+    },
+    {
+        "id": 30,
+        "name":"Broad Spectrum Sunscreen",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 490,
+        "rating": "★★★★★",
+        "image": "photos/sunscreen/sunscreen-broadspectrum.jpg"
+    },
+    {
+        "id": 31,
+        "name":"Guava Sunscreen",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 490,
+        "rating": "★★★★☆",
+        "image": "photos/sunscreen/sunscreen-guava.jpg"
+    },
+    {
+        "id": 32,
+        "name":"Charcoal Sheet",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 300,
+        "rating": "★★★☆☆",
+        "image": "photos/sheet/sheet-charcoal.jpg"
+    },
+    {
+        "id": 33,
+        "name":"Rice Sheet",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 300,
+        "rating": "★★★☆☆",
+        "image": "photos/sheet/sheet-rice.jpg"
+    },
+    {
+        "id": 34,
+        "name":"Gold Sheet",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 300,
+        "rating": "★★☆☆☆",
+        "image": "photos/sheet/gold sheet.jpg"
+    },
+    {
+        "id": 35,
+        "name":"Lemon Sheet",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 300,
+        "rating": "★★★★★",
+        "image": "photos/sheet/sheet-lemon.jpg"
+    },{
+        "id": 36,
+        "name":"Pearl Sheet",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 300,
+        "rating": "★★★★☆",
+        "image": "photos/sheet/pearl sheet.jpg"
+    },
+    {
+        "id": 37,
+        "name":"Saffron Sheet",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 300,
+        "rating": "★★★☆☆",
+        "image": "photos/sheet/saffron sheet.jpg"
+    },
+    {
+        "id": 38,
+        "name":"Coco Butter Kit",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 999,
+        "rating": "★★☆☆☆",
+        "image": "photos/kit/coco butter kit.jpg"
+    },
+   {
+        "id": 41,
+        "name":"Multani Mitti Kit",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 999,
+        "rating": "★★★★★",
+        "image": "photos/kit/multani mitti kit 2.jpg"
+    },{
+        "id": 42,
+        "name":"Shea Butter Kit",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 1000,
+        "rating": "★★★☆☆",
+        "image": "photos/kit/shea butter kit.jpg"
+    },
+    {
+        "id": 43,
+        "name":"Peach Kit",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 980,
+        "rating": "★★☆☆☆",
+        "image": "photos/kit/peach kit.jpg"
+    },
+
+    {
+        "id": 16,
+        "name":"Peach Scrub",
+        "description": "Refreshing facewash with natural aloevera extracts.",
+        "price": 540,
+        "rating": "★★★☆☆",
+        "image": "photos/scrub/peach scrub.jpg"
+    }
+
+]

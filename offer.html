@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radiant Beauty</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <link rel="stylesheet" href="homepage.css">
+  <link rel="stylesheet" href="facewash.css">
+  <style>
+  .offer {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.offer-item {
+    width: 300px;
+    padding: 20px;
+    margin: 10px;
+    background-color: #93c1f7; /* Updated background color */
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.offer-item h3 {
+    color: #333;
+    margin-top: 0;
+}
+
+.offer-item p {
+    color: #666;
+}
+
+.offer-item .feature {
+    margin-bottom: 15px;
+}
+
+.offer-item button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0d3698; /* Button background color */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.offer-item button:hover {
+    background-color: #1149cc; /* Button hover background color */
+}
+
+</style>
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+  <script src="homepage.js"></script>
+  <div class="container fixed-top" id="bye"></div>
+  <nav class="navbar navbar-default navbar-fixed-top sticky-top" style="margin-bottom: 70px;">
+    <div class="promo-container sticky-top" style="background-color: rgb(209, 230, 237); padding: 8px;text-align: center;width:100%;color:black; font-family: Montserrat, sans-serif;">
+      <p><b>Avail 30% off on our skincare essentials</b></p>
+    </div>
+    <div class="container">
+      <div class="navbar-header">
+        <img src="logo-removebg-preview2.png" style="width: 200px; height: 84; margin: 10px;">
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="homepage.html">HOME</a></li>
+          <li><a href="facewash.html">PRODUCTS</a></li>
+          <li><a href="offer.html">OFFER</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-search" style="color: black;height:10px;width:10px; margin-left: 210px;" id="sicon" onclick="showSearchPopup()"></span></a></li>
+          <!-- Search Popup container -->
+          <div id="overlay"></div>
+          <div id="popup">
+            <div id="closeIcon" onclick="hideSearchPopup()"><span class="glyphicon glyphicon-remove"></span></div>
+            <hr>
+            <label for="searchInput">Search:</label>
+            <input type="text" id="searchInput" placeholder="search" style="width:300px;border:none;border-radius:0%;height:25px;">
+            <button onclick="search()" style="background-color: rgb(234, 238, 241);border: none;width: 60px;border-radius: 20px;">Search</button>
+          </div>
+          <script src="search.js"></script>
+      
+          <li><a href="form.php"><span class="glyphicon glyphicon-user" style="color: black;height:20px;width:20px;"></span></a></li>
+          <header>
+            <div class="icon-cart">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"/>
+                </svg>
+                <span>0</span>
+            </div>
+          </header>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="containerr">
+          
+    <div class="listProduct">
+  
+    </div>
+  </div>
+  <div class="cartTab">
+    <h1>Shopping Cart</h1>
+    <div class="listCart">
+        
+    </div>
+    <div class="btnn">
+        <button class="Close">Close</button>
+        <button class="Check Out"><a href="
+          https://rzp.io/l/vIZSmRg
+          ">Check Out</a></button>
+    </div>
+  </div>
+  
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <!-- CART -->
+<script>
+  let listProductHTML = document.querySelector('.listProduct');
+  let listCartHTML = document.querySelector('.listCart');
+  let iconCart = document.querySelector('.icon-cart');
+  let iconCartSpan = document.querySelector('.icon-cart span');
+  let body = document.querySelector('body');
+  let closeCart = document.querySelector('.Close');
+  let products = [];
+  let cart = [];
+  
+  
+  iconCart.addEventListener('click', () => {
+      body.classList.toggle('showCart');
+  })
+  closeCart.addEventListener('click', () => {
+      body.classList.toggle('showCart');
+  })
+  
+      const addDataToHTML = () => {
+      
+      }
+      listProductHTML.addEventListener('click', (event) => {
+          let positionClick = event.target;
+          if(positionClick.classList.contains('addCart')){
+              let id_product = positionClick.parentElement.dataset.id;
+              addToCart(id_product);
+          }
+      })
+  const addToCart = (product_id) => {
+      let positionThisProductInCart = cart.findIndex((value) => value.product_id == product_id);
+      if(cart.length <= 0){
+          cart = [{
+              product_id: product_id,
+              quantity: 1
+          }];
+      }else if(positionThisProductInCart < 0){
+          cart.push({
+              product_id: product_id,
+              quantity: 1
+          });
+      }else{
+          cart[positionThisProductInCart].quantity = cart[positionThisProductInCart].quantity + 1;
+      }
+      addCartToHTML();
+      addCartToMemory();
+  }
+  const addCartToMemory = () => {
+      localStorage.setItem('cart', JSON.stringify(cart));
+  }
+  const addCartToHTML = () => {
+      listCartHTML.innerHTML = '';
+      let totalQuantity = 0;
+      if(cart.length > 0){
+          cart.forEach(item => {
+              totalQuantity = totalQuantity +  item.quantity;
+              let newItem = document.createElement('div');
+              newItem.classList.add('item');
+              newItem.dataset.id = item.product_id;
+  
+              let positionProduct = products.findIndex((value) => value.id == item.product_id);
+              let info = products[positionProduct];
+              listCartHTML.appendChild(newItem);
+              newItem.innerHTML = `
+              <div class="image">
+                      <img src="${info.image}">
+                  </div>
+                  <div class="name">
+                  ${info.name}
+                  </div>
+                  <div class="totalPrice">&#8377; ${info.price * item.quantity}</div>
+                  <div class="quantity">
+                      <span class="minus"><</span>
+                      <span>${item.quantity}</span>
+                      <span class="plus">></span>
+                  </div>
+              `;
+          })
+      }
+      iconCartSpan.innerText = totalQuantity;
+  }
+  
+  listCartHTML.addEventListener('click', (event) => {
+      let positionClick = event.target;
+      if(positionClick.classList.contains('minus') || positionClick.classList.contains('plus')){
+          let product_id = positionClick.parentElement.parentElement.dataset.id;
+          let type = 'minus';
+          if(positionClick.classList.contains('plus')){
+              type = 'plus';
+          }
+          changeQuantityCart(product_id, type);
+      }
+  })
+  const changeQuantityCart = (product_id, type) => {
+      let positionItemInCart = cart.findIndex((value) => value.product_id == product_id);
+      if(positionItemInCart >= 0){
+          let info = cart[positionItemInCart];
+          switch (type) {
+              case 'plus':
+                  cart[positionItemInCart].quantity = cart[positionItemInCart].quantity + 1;
+                  break;
+          
+              default:
+                  let changeQuantity = cart[positionItemInCart].quantity - 1;
+                  if (changeQuantity > 0) {
+                      cart[positionItemInCart].quantity = changeQuantity;
+                  }else{
+                      cart.splice(positionItemInCart, 1);
+                  }
+                  break;
+          }
+      }
+      addCartToHTML();
+      addCartToMemory();
+  }
+  
+  const initApp = () => {
+      // get data product
+      fetch('facewash.json')
+      .then(response => response.json())
+      .then(data => {
+          products = data;
+          addDataToHTML();
+  
+          // get data cart from memory
+          if(localStorage.getItem('cart')){
+              cart = JSON.parse(localStorage.getItem('cart'));
+              addCartToHTML();
+          }
+      })
+  }
+  initApp();
+  </script>    
+  <section id="labels">
+    <div class="container">
+    <div class="row">
+          <div class="col-sm-6 col-md-3">
+            <div class="dl">
+              <div class="brand">
+                  <h2>Welcome Offer</h2>
+              </div>
+              <div class="discount alizarin">30%
+                  <div class="type">off</div>
+              </div>
+              <div class="descr">
+                  <strong>Welcome gesture for new customers</strong> <br>
+                  Radiant Beauty offers a 30% discount on the first purchase when signing up for the newsletter.
+              </div>
+              <div class="ends">
+                  <small>* Conditions and restrictions apply.</small>
+              </div>
+              <div class="coupon midnight-blue">
+                  <a data-toggle="collapse" href="#code-1" class="open-code">Get a code</a>
+                  <div id="code-1" class="collapse code">LV5MAY14</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3">
+            <div  class="dl">
+              <div class="brand">
+                  <h2>Bundle Deal</h2>
+              </div>
+              <div class="discount emerald">
+                  <p>Save up to </p>
+                  <div class="type">
+                    Rs.200/- off
+                  </div>
+              </div>
+              <div class="descr">
+                  <strong>
+                    Radiant Beauty offers a bundle deal 
+                  </strong> <br>
+                  Buy a set of skincare products at a discounted price compared to purchasing each item individually.  
+              </div>
+              <div class="ends">
+                 
+              </div>
+              <div class="coupon midnight-blue">
+                  <a data-toggle="collapse" href="#code-2" class="open-code">Get a code</a>
+                  <div id="code-2" class="collapse in code">
+                      MNO123ST
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3">
+            <div  class="dl">
+              <div class="brand">
+                  <h2>
+                    Seasonal Sale
+                  </h2>
+              </div>
+              <div class="discount peter-river">
+              25%
+                  <div class="type">
+                      off
+                  </div>
+              </div>
+              <div class="descr">
+                  <strong>
+                    Seasonal sales events like summer or winter promotions 
+                  </strong> <br>
+                  Radiant Beauty offers a 25% discount on select skincare products.
+              </div>
+              <div class="ends">
+                  <small>
+                     * Conditions and restrictions apply.
+                  </small>
+              </div>
+              <div class="coupon midnight-blue">
+                  <a data-toggle="collapse" href="#code-3" class="open-code">Get a code</a>
+                  <div id="code-3" class="collapse code">
+                      OLV4SY3R
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3">
+            <div  class="dl">
+              <div class="brand">
+                  <h2>
+                    Referral Program
+                  </h2>
+              </div>
+              <div class="discount amethyst">
+               <small> Reward </small>
+                  <div class="type">
+                    Points
+                  </div>
+              </div>
+              <div class="descr">
+                  <strong>
+                    Radiant Beauty rewards loyal customers  
+                  </strong> <br>
+                  Both the referrer and the new customer receive 100 reward points, which can be redeemed for discounts on future purchases. 
+              </div>
+              <div class="ends">
+                  <small>
+                     * Conditions and restrictions apply.
+                  </small>
+              </div>
+              <div class="coupon midnight-blue">
+                  <a data-toggle="collapse" href="#code-4" class="open-code">Get a code</a>
+                  <div id="code-4" class="collapse code">
+                      ZUY4OPLQ
+                  </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    </div>
+    <br><br><br>
+  </section>
+  <div class="container">
+    <h1>Radiant Beauty Offers</h1>
+  
+    <div class="offer">
+      <div class="offer-item">
+        <h3>Free Skincare Consultation</h3>
+        <p class="feature">Get a personalized skincare routine tailored to your skin type and concerns with our expert consultation.</p>
+        <button><a href="https://chat.whatsapp.com/KYjHYFReihwEgV4obGUKEp" style="color:white">Learn More</a></button>
+      </div>
+  
+      <div class="offer-item">
+        <h3>Gift with Purchase</h3>
+        <p class="feature"style="font-size:larger"> Receive a complimentary travel-size product with every purchase above a certain amount.</p>
+      </div>
+  
+      <div class="offer-item">
+       
+        <h5 class="feature" style="color:black;font-size: larger;">Be the first to try out our latest skincare products before they are officially launched to the public.</h5>
+        <button><a href="facewash.html" style="color:white">Shop Now</a></button>
+      </div>
+    </div>
+  
+    <div id="consultationModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="hideConsultation()">&times;</span>
+        <p>Our expert skincare consultants are here to provide you with personalized skincare recommendations based on your unique needs and concerns. Book your free consultation today!</p>
+      </div>
+    </div>
+  
+    <div id="previewModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="hidePreview()">&times;</span>
+        <p>Be the first to experience our newest skincare innovations before anyone else. Sign up now for exclusive access to our product previews!</p>
+      </div>
+    </div>
+  
+    <div id="giftModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="hideGift()">&times;</span>
+        <p>Enjoy a complimentary travel-size product of your choice with every purchase of $50 or more. Shop now and treat yourself to radiant skin!</p>
+      </div>
+    </div>
+  </div>
+  <br><br><br>
+  <script>
+    function showConsultation() {
+      var modal = document.getElementById("consultationModal");
+      modal.style.display = "block";
+    }
+  
+    function hideConsultation() {
+      var modal = document.getElementById("consultationModal");
+      modal.style.display = "none";
+    }
+  
+    function showPreview() {
+      var modal = document.getElementById("previewModal");
+      modal.style.display = "block";
+    }
+  
+    function hidePreview() {
+      var modal = document.getElementById("previewModal");
+      modal.style.display = "none";
+    }
+  
+    function showGift() {
+      var modal = document.getElementById("giftModal");
+      modal.style.display = "block";
+    }
+  
+    function hideGift() {
+      var modal = document.getElementById("giftModal");
+      modal.style.display = "none";
+    }
+  
+    window.onclick = function(event) {
+      var modals = document.getElementsByClassName("modal");
+      for (var i = 0; i < modals.length; i++) {
+        if (event.target == modals[i]) {
+          modals[i].style.display = "none";
+        }
+      }
+    }
+  </script>
+  <style>
+/* Main website background */
+.dl .descr {
+    margin-top: 10px;
+    padding: 20px 15px;
+    font-size: 16px; /* Adjust the font size as needed */
+}
+body {
+    background-color: #fff; /* White background */
+}
+
+section {
+    padding: 2.5% 0;
+}
+
+/* Adjusted color scheme */
+.alizarin, .peter-river {
+    background: #93c1f7; /* Light Blue */
+}
+
+.amethyst {
+    background: #79a7d8; /* Lighter Blue */
+}
+
+.emerald {
+    background: #4d82b8; /* Slightly Darker Blue */
+}
+
+.midnight-blue {
+    background: #2e5a8e; /* Dark Blue */
+}
+
+.dl {
+    background: #93c1f7; /* Background color */
+    padding: 30px 0;
+    border-radius: 20px;
+    position: relative;
+    width: 275px;
+    height: 750px;
+}
+
+.dl:before {
+    content: " ";
+    height: 20px;
+    width: 20px;
+    background: #ddd;
+    border-radius: 20px;
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    margin-left: -10px;
+}
+
+.dl .brand {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 10px 15px;
+    margin-top: 10px;
+    text-align: center;
+    min-height: 100px;
+}
+
+/* Dark font colors for better contrast */
+.dl .discount, .dl .coupon, .dl .descr, .dl .ends, .dl .coupon a.open-code, .dl .coupon .code {
+    color: #333; /* Dark font color */
+}
+
+.dl .discount {
+    min-height: 50px;
+    position: relative;
+    font-size: 80px;
+    line-height: 80px;
+    text-align: center;
+    font-weight: 700;
+    padding: 5px 2px 0;
+    color: #0e0848; /* Coupon font color */
+}
+
+.dl .discount:after {
+    content: " ";
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+    position: absolute;
+    bottom: -20px;
+    left: 20%;
+}
+
+.dl .discount.alizarin:after {
+    border-top: 20px solid #93c1f7; /* Light Blue */
+}
+
+.dl .discount.peter-river:after {
+    border-top: 20px solid #93c1f7; /* Light Blue */
+}
+
+.dl .discount.emerald:after {
+    border-top: 20px solid #4d82b8; /* Slightly Darker Blue */
+}
+
+.dl .discount.amethyst:after {
+    border-top: 20px solid #79a7d8; /* Lighter Blue */
+}
+
+.dl .discount .type {
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: -30px;
+}
+
+.dl .descr {
+    margin-top: 10px;
+    padding: 20px 15px;
+}
+
+.dl .ends {
+    padding: 0 15px;
+    margin-bottom: 10px;
+}
+
+.dl .coupon {
+    min-height: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 20px 15px;
+}
+
+.dl .coupon .code {
+    letter-spacing: 1px;
+    border-radius: 4px;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #4d82b8; /* Coupon background color */
+    color: #fff; /* Coupon font color */
+}
+
+  </style>
+
+
+  
+  <!-- Container (Contact Section) -->
+<div class="footer" id="contact">
+  <h2 class="text-center">CONTACT</h2>
+  <p style="color:black;font-size: large;text-align: center;">Contact us and we'll get back to you within 24 hours.</p>
+  <p style="color:black;font-size:large;text-align: center;"><span class="glyphicon glyphicon-envelope" style="color:black;font-weight: 200;"></span> myemail@something.com</p>
+  <br>
+  <div class="container row">
+    <div class="footer-col">
+      <h4>Need Help?</h4>
+      <ul>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Shipping</a></li>
+        <li><a href="#">Returns</a></li>
+        <li><a href="#">Order status</a></li>
+        <li><a href="#">Payment options</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+        <ul>
+          <li><a href="review.html">Reviews</a></li>
+          <li><a href="terms.html">Terms & Conditions</a></li>
+          <li><a href="#">Visit Website</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Our Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Office Location</h4>
+        <ul>
+          <li><a href="#">Office 321, Glass Tower, Churchgate, Mumbai</a></li> 
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>follow us</h4>
+        <div class="social-links">
+          <a href="#"><i class="fa-brands fa-facebook"><img src="fb-removebg-preview.png" style="height: 25px;"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"><img src="in-removebg-preview.png" style="height: 25px;"></i></a>
+        </div>
+      </div>
+    </div>
+    <div id="horizontal-line"></div>
+    <div id="copyright">
+      
+        &copy; All Rights Reserved 2023-2024
+    <br><br>
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+    </div>
+  </div>
+
+
+</body>
+</html>
